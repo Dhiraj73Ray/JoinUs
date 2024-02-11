@@ -7,6 +7,53 @@ Download & install [Node.js]()  and  [MySQL]()
 ## Step 2
 This is the [Requirements.txt](https://github.com/Dhiraj73Ray/JoinUs/blob/main/requirements.txt) file. After extracting this folder first install all dependencies.
 
+## Step 3
+  - Create a database and table(write query in MySQL)
+```
+CREATE DATABASE JOIN_US;
+USE JOIN_US;
+
+CREATE TABLE USER
+(
+  EMAIL VARCHAR(500) PRIMARY KEY,
+  CREATED_AT TIMESTAMP DEFAULT NOW()
+);
+
+INSERT INTO USER(EMAIL) VALUES
+  ("ZINGHANG@GMAIL.COM"),
+  ("SUEDAVID@GMAIL.COM"),
+  ("FARAHNKUMARI@HOTMAIL.COM"),
+  ("RAM2190@GMAIL.COM");
+
+SELECT * FROM USER;
+```
+  - Make Connection Mysql with Node.js
+  - Insert bulk entries as many you want (in app.js  file)
+```
+var data = [];
+for (var i = 0; i < 500; i++){
+  data.push([
+    email: faker.internet.email(),
+    created_at: faker.date.past()
+  ])
+}
+
+var q = "INSERT INTO USER (EMAIL, CREATED_AT) VALUES ?";
+
+connection.query(q, data, function(err, result) {
+   if (error) throw error;
+   console.log(result);
+ });
+```
+
+## Step 4
+Done just run the command
+```
+node app.js
+```
+
+##
+
 
 
 ### There also a joke route where you can read different jokes everytime
@@ -22,4 +69,3 @@ app.get("/joke", async (req, res) => {
   }
 });
 ```
-### Just type
