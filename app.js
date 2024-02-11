@@ -17,11 +17,7 @@ app.set("view engine", "ejs");
 
 app.use(bodyparser.urlencoded({ extended: true }));
 
-// "axios": "^1.6.7",
-// "body-parser": "^1.20.2",
-// "ejs": "^3.1.9",
-// "express": "^4.18.2",
-// "mysql": "^2.18.1"
+
 
 var connection = mysql.createConnection({
   host: "localhost",
