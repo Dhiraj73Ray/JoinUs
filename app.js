@@ -1,5 +1,4 @@
 const express = require("express");
-const serverless = require("serverless-http");
 const path = require("path"); // Require the path module
 const bodyparser = require("body-parser");
 const app = express();
@@ -119,8 +118,5 @@ app.listen(4200, () => {
   console.log("listening to port 4200.....");
   console.log(__dirname)
 });
-
-app.use("/.netlify/function/api", router);
-module.exports.handler = serverless(app)
 
 // taskkill /F /PID 9004
