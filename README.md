@@ -2,7 +2,7 @@
 <h3>This is a node_express app. Simply made for illustrating the connection between MySQL and Node.js</h3>
 
 ## Step 1
-Download & install [Node.js]()  and  [MySQL]() 
+Download & install [Node.js](https://nodejs.org/en/download/)  and  [MySQL](https://dev.mysql.com/downloads/installer/) 
 
 ## Step 2
 This is the [Requirements.txt](https://github.com/Dhiraj73Ray/JoinUs/blob/main/requirements.txt) file. After extracting this folder first install all dependencies.
