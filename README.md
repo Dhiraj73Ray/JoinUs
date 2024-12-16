@@ -2,6 +2,10 @@
 #### Follow My [GitHub](https://github.com/Dhiraj73Ray) For More Projects
 <h3>This is a node_express app. Simply made for illustrating the connection between MySQL and Node.js</h3>
 
+![1 Screenshot](https://github.com/Dhiraj73Ray/JoinUs/blob/main/Screenshot%20(407).png)
+![2 Screenshot](https://github.com/Dhiraj73Ray/JoinUs/blob/main/Screenshot%20(408).png)
+
+
 ## Step 1
 Download & install [Node.js](https://nodejs.org/en/download/)  and  [MySQL](https://dev.mysql.com/downloads/installer/) 
 
