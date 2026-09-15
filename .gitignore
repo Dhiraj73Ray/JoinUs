@@ -1,4 +1,26 @@
-# Local Netlify folder
-.netlify
-
+# Dependencies
 node_modules/
+
+# Environment
+.env
+.env.local
+
+# Junk / archive files (kept locally, not on GitHub)
+unclean_app.js
+sliding_gif.html
+New Text Document.txt
+requirements.txt
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
