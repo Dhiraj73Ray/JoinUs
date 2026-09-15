@@ -2,17 +2,29 @@
 #### Follow My [GitHub](https://github.com/Dhiraj73Ray) For More Projects
 <h3>This is a node_express app. Simply made for illustrating the connection between MySQL and Node.js</h3>
 
+#### A beginner Node.js + Express + MySQL project — a simple email waitlist signup page.
+`Built in 2023 as my first project after learning SQL. Archived for learning history.`
+
+
 ![1 Screenshot](https://github.com/Dhiraj73Ray/JoinUs/blob/main/Screenshot%20(407).png)
 ![2 Screenshot](https://github.com/Dhiraj73Ray/JoinUs/blob/main/Screenshot%20(408).png)
 
+## Status
 
-## Step 1
+📦 Archived — A learning project from 2023. Not maintained.
+See my newer projects for more recent work.
+
+## Setup
+
+### Step 1
 Download & install [Node.js](https://nodejs.org/en/download/)  and  [MySQL](https://dev.mysql.com/downloads/installer/) 
 
-## Step 2
-This is the [Requirements.txt](https://github.com/Dhiraj73Ray/JoinUs/blob/main/requirements.txt) file. After extracting this folder first install all dependencies.
+### Step 2
+```bash
+npm install
+```
 
-## Step 3
+### Step 3
   - Create a database and table(write query in MySQL)
 ```
 CREATE DATABASE JOIN_US;
@@ -51,7 +63,17 @@ connection.query(q, data, function(err, result) {
  });
 ```
 
-## Step 4
+### Step 4 Configure environment
+Copy .env.example to .env and fill in your DB credentials:
+
+```
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=join_us
+```
+
+### Step 5
 Done just run the command
 ```
 node app.js
