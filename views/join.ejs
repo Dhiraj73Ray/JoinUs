@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="join-container">
+      <h1>JOIN US</h1>
+      <p>
+        Enter your email to join with <strong> <%=data %> </strong> others on our
+        website waitlist. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;We are
+        100% free
+      </p>
+      <form method="post" action="/register">
+        <input type="text" name="email" class="form-input" placeholder="Enter your email" />
+        <button class="form-button">Join Now</button>
+      </form>
+    </div>
+  </body>
+</html>

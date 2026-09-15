@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .image-wrapper {
+      display: flex;
+      transition: transform 1s ease;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      font-size: 24px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .arrow-left {
+      left: 10px;
+      display: none; /* Initially hide left arrow */
+    }
+
+    .arrow-right {
+      right: 10px;
+      display: block; /* Initially show right arrow */
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="image-wrapper">
+    <img src="Screenshot (407).png" alt="First Image">
+    <img src="Screenshot (408).png" alt="Second Image">
+  </div>
+  <button class="arrow arrow-left" onclick="slide(-1)">←</button>
+  <button class="arrow arrow-right" onclick="slide(1)">→</button>
+</div>
+
+<script>
+  let currentSlide = 0; // 0 for the first image, 1 for the second image
+
+  function slide(direction) {
+    const images = document.querySelector('.image-wrapper');
+    const totalImages = document.querySelectorAll('.image-wrapper img').length;
+
+    currentSlide += direction;
+
+    if (currentSlide >= totalImages - 1) {
+      currentSlide = totalImages - 1; // Stay on the second image
+    } else if (currentSlide < 0) {
+      currentSlide = 0; // Stay on the first image
+    }
+
+    images.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    // Show and hide arrows based on the current image
+    toggleArrows();
+  }
+
+  function toggleArrows() {
+    const leftArrow = document.querySelector('.arrow-left');
+    const rightArrow = document.querySelector('.arrow-right');
+
+    if (currentSlide === 0) {
+      leftArrow.style.display = 'none';  // Hide left arrow
+      rightArrow.style.display = 'block'; // Show right arrow
+    } else if (currentSlide === 1) {
+      leftArrow.style.display = 'block'; // Show left arrow
+      rightArrow.style.display = 'none'; // Hide right arrow
+    }
+  }
+
+  // Initialize the slider state
+  toggleArrows();
+</script>
+
+</body>
+</html>

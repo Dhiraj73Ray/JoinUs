@@ -1,0 +1,83 @@
+body {
+    text-align: center;
+    background-image: url("/image/bgimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+h1 {
+    font-size: 14rem;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: -1.2rem;
+}
+
+form {
+    /* display: inline-flex */
+    margin-top: 4rem;
+}
+
+.form{
+    margin-top: 30px;
+}
+
+/* Style the form container */
+.form-container {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+/* Style the input */
+.form-input {
+  width: 250px;
+  height: 20px;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 3px solid #ffffff;
+  border-radius: 5px;
+  font-size: 16px;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+/* Style the input placeholder */
+.form-input::placeholder {
+  color: #fff; /* Set the placeholder color to white */
+  font-size: 14px; /* Set the placeholder font size */
+}
+
+/* Style the input when it's focused */
+.form-input:focus {
+  outline: none;
+  border-bottom-color: #007bff;
+  font-size: 1.2rem;
+}
+
+/* Style the input text when it's typed */
+.form-input:focus + input[type="text"] {
+  font-size: 18px; /* Increase font size when focused */
+}
+
+  
+  /* Style the button */
+  .form-button {
+    height: 35px;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Hover effect for button */
+  .form-button:hover {
+    background-color: #0056b3;
+  }
+  
